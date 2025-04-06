@@ -119,4 +119,14 @@
   body {
     @apply bg-background text-foreground;
   }
+  button:not([disabled]),
+  [role="button"]:not([disabled]) {
+    cursor: pointer;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-5xl mx-auto p-6;
+  }
 }
