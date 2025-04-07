@@ -21,7 +21,7 @@ export default function ImageUpload({ onSubmitImage }: ImageUploadProps) {
       </CardHeader>
       <CardContent>
         <form onSubmit={onSubmitImage} className="flex flex-col gap-4">
-          <Input id="picture" type="file" />
+          <Input name="picture" type="file" />
 
           <div className="flex justify-between mt-4">
             <Button type="reset" variant="outline">

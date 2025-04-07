@@ -1,4 +1,3 @@
-import { Spinner } from "@/components/spinner";
 import {
   Dialog,
   DialogContent,
@@ -10,7 +9,6 @@ import {
 type DescriptionProps = {
   open: boolean;
   setOpen: (open: boolean) => void;
-  loading?: boolean;
   vegetable: string;
 };
 
@@ -23,9 +21,10 @@ const Result = ({ vegetable }: { vegetable: string }) => {
 
   return (
     <div>
-      <p className="text-lg">{`Your vegetables is ${(
+      <p className="text-lg">
+        {`Your vegetable is `}
         <span className="font-semibold">{vegetable}</span>
-      )}`}</p>
+      </p>
     </div>
   );
 };
@@ -33,20 +32,17 @@ const Result = ({ vegetable }: { vegetable: string }) => {
 export default function Description({
   open,
   setOpen,
-  loading = false,
   vegetable,
 }: DescriptionProps) {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Your vegetables is here</DialogTitle>
+          <DialogTitle>Your vegetable is here</DialogTitle>
           <DialogDescription></DialogDescription>
         </DialogHeader>
 
-        {loading && <Spinner size="lg" className="my-6" />}
-
-        {!loading && <Result vegetable={vegetable} />}
+        {<Result vegetable={vegetable} />}
       </DialogContent>
     </Dialog>
   );
