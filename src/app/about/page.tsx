@@ -6,7 +6,7 @@ import { imageIdentifierPath } from "@/path";
 
 export default function AboutSayurApaPage() {
   return (
-    <main className="container mx-auto px-6 py-12 space-y-16">
+    <main className="container mx-auto px-6 py-18 space-y-16">
       {/* Hero Section */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div>
