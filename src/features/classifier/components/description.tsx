@@ -1,3 +1,4 @@
+import { Vegetable } from "../types";
 import {
   Dialog,
   DialogContent,
@@ -5,7 +6,6 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { Vegetable } from "../types";
 
 type DescriptionProps = {
   open: boolean;

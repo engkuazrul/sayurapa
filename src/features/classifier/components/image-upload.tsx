@@ -1,3 +1,8 @@
+import { useRef, useState } from "react";
+import Image from "next/image";
+import { LucideTrash } from "lucide-react";
+
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -6,10 +11,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { LucideTrash } from "lucide-react";
-import { useRef, useState } from "react";
-import Image from "next/image";
 
 type ImageUploadProps = {
   onSubmitImage: (e: React.FormEvent<HTMLFormElement>) => void;

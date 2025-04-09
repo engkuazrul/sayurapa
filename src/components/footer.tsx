@@ -1,6 +1,6 @@
 // components/Footer.tsx
 import Link from "next/link";
-import { LinkedinIcon, GithubIcon } from "lucide-react";
+import { GithubIcon,LinkedinIcon } from "lucide-react";
 
 export default function Footer() {
   return (

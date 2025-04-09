@@ -1,14 +1,13 @@
 "use client";
 
-import ImageUpload from "./image-upload";
-import Description from "./description";
 import { useState } from "react";
-import { Spinner } from "@/components/spinner";
+
 import { Vegetable } from "../types";
+import Description from "./description";
+import ImageUpload from "./image-upload";
+import { Spinner } from "@/components/spinner";
 
-type ClassifierProps = {};
-
-export default function Classifier({}: ClassifierProps) {
+export default function Classifier() {
   const [showModal, setShowModal] = useState(false);
   const [vegetable, setVegetable] = useState<Vegetable | null>(null);
   const [loading, setLoading] = useState(false);

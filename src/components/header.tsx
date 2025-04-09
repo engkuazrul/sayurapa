@@ -1,11 +1,7 @@
 import Link from "next/link";
-import { Button, buttonVariants } from "./ui/button";
-import {
-  aboutPath,
-  homePath,
-  imageIdentifierPath,
-  textSearchPath,
-} from "@/path";
+
+import { buttonVariants } from "./ui/button";
+import { aboutPath, homePath, imageIdentifierPath } from "@/path";
 
 export function Header() {
   return (

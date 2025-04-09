@@ -1,5 +1,6 @@
 // app/not-found.tsx or pages/404.tsx (depending on your Next.js version)
 import Link from "next/link";
+
 import { buttonVariants } from "@/components/ui/button";
 import { homePath } from "@/path";
 
