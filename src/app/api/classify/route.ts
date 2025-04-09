@@ -6,6 +6,8 @@ const Hf = new HfInference(process.env.NEXT_PUBLIC_HUGGINGFACE_TOKEN!);
 
 export const runtime = "nodejs";
 
+export const maxDuration = 300;
+
 /* eslint-disable @typescript-eslint/no-explicit-any */
 export async function POST(req: NextRequest) {
   const contentType = req.headers.get("content-type") || "";
