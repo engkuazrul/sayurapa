@@ -4,12 +4,13 @@ import ImageUpload from "./image-upload";
 import Description from "./description";
 import { useState } from "react";
 import { Spinner } from "@/components/spinner";
+import { Vegetable } from "../types";
 
 type ClassifierProps = {};
 
 export default function Classifier({}: ClassifierProps) {
   const [showModal, setShowModal] = useState(false);
-  const [vegetable, setVegetable] = useState("");
+  const [vegetable, setVegetable] = useState<Vegetable | null>(null);
   const [loading, setLoading] = useState(false);
 
   const handleImageUpload = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -30,7 +31,7 @@ export default function Classifier({}: ClassifierProps) {
       // Assuming the result has a 'label' field for the classification
       if (data && data[0]) {
         console.log(data);
-        const predictedLabel = data[0].label; // Adjust based on the actual response format
+        const predictedLabel = data[0]; // Adjust based on the actual response format
         setVegetable(predictedLabel);
         setShowModal(true); // Show modal with the result
       }
@@ -50,7 +51,7 @@ export default function Classifier({}: ClassifierProps) {
   }
 
   return (
-    <main className="container flex justify-center items-center h-screen">
+    <main className="min-h-[90vh] flex justify-center items-center">
       <ImageUpload onSubmitImage={handleImageUpload} />
 
       <Description

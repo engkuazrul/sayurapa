@@ -30,7 +30,7 @@ export async function POST(req: NextRequest) {
 
     const result = await Hf.imageClassification({
       data: imageBuffer,
-      model: "jazzmacedo/fruits-and-vegetables-detector-36",
+      model: "flatmoon102/fruits_and_vegetables_image_classification",
     });
 
     return NextResponse.json(result);
