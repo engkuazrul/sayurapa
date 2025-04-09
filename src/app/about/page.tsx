@@ -17,7 +17,7 @@ export default function AboutSayurApaPage() {
           </h1>
           <p className="mt-4 text-lg text-gray-700 dark:text-gray-300">
             SayurApa is an open-source image recognition tool that leverages AI
-            to classify vegetables using just a picture. Whether you're learning
+            to classify vegetables using just a picture. Whether youre learning
             about local produce or need quick information, SayurApa makes it
             simple and accessible by utilizing advanced AI algorithms for
             accurate vegetable identification.
