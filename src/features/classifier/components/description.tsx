@@ -29,11 +29,15 @@ const Result = ({ vegetable }: { vegetable: Vegetable | null }) => {
     setInfoLoading(true);
     const fetchVeggie = async () => {
       if (vegetable) {
-        const veggie = await getVeggie(vegetable.label.toLowerCase().trim());
-        setVegetableDetails(veggie);
-        setInfoLoading(false);
-      } else {
-        setInfoLoading(false);
+        try{
+          const veggie = await getVeggie(vegetable.label.toLowerCase().trim());
+          setVegetableDetails(veggie);
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        } catch (error: any) {
+          console.log(error);
+        } finally {
+          setInfoLoading(false);
+        }
       }
     };
 
