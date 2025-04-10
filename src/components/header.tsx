@@ -1,6 +1,5 @@
 import Link from "next/link";
 
-import { buttonVariants } from "./ui/button";
 import { aboutPath, homePath, imageIdentifierPath } from "@/path";
 
 export function Header() {
@@ -13,12 +12,12 @@ export function Header() {
         </h1>
       </Link>
 
-      <nav className="text-sm font-medium">
+      <nav className="font-semibold text-base">
         <ul className="flex items-center gap-x-6">
           <li>
             <Link
               href={imageIdentifierPath()}
-              className={buttonVariants({ variant: "link" })}
+              className="hover:underline"
             >
               Image Identifier
             </Link>
@@ -29,7 +28,7 @@ export function Header() {
           <li>
             <Link
               href={aboutPath()}
-              className={buttonVariants({ variant: "link" })}
+              className="hover:underline"
             >
               About SayurApa
             </Link>
