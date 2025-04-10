@@ -47,21 +47,23 @@ export default function Classifier() {
 
   if (loading) {
     return (
-      <main className="flex justify-center items-center w-full h-screen bg-gray-600 opacity-20">
+      <main className="flex justify-center items-center w-full h-screen bg-gray-600 opacity-20 z-20">
         <Spinner size="lg" />
       </main>
     );
   }
 
   return (
-    <main className="min-h-[90vh] flex justify-center items-center">
-      <ImageUpload onSubmitImage={handleImageUpload} />
+    <main className="min-h-[90vh] flex justify-center items-center p-4 md:p-8">
+      <div className="w-full sm:w-[80%] md:w-[60%] lg:w-[30rem]">
+        <ImageUpload onSubmitImage={handleImageUpload} />
 
-      <Description
-        open={showModal}
-        setOpen={setShowModal}
-        vegetable={vegetable}
-      />
+        <Description
+          open={showModal}
+          setOpen={setShowModal}
+          vegetable={vegetable}
+        />
+      </div>
     </main>
   );
 }
