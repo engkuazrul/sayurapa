@@ -30,7 +30,7 @@ export function Header() {
               href={aboutPath()}
               className="hover:underline"
             >
-              About SayurApa
+              Learn More
             </Link>
           </li>
         </ul>

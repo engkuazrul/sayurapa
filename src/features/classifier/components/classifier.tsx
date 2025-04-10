@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { toast } from "sonner"; // Import Sonner for notifications
 
 import { Vegetable } from "../types";
 import Description from "./description";
@@ -33,9 +34,12 @@ export default function Classifier() {
         const predictedLabel = data[0]; // Adjust based on the actual response format
         setVegetable(predictedLabel);
         setShowModal(true); // Show modal with the result
+      } else {
+        toast.error("No vegetable identified. Please try again!"); // Toast error message
       }
     } catch (error) {
       console.error("Error during image classification:", error);
+      toast.error("An error occurred during classification. Please try again.");
     } finally {
       setLoading(false);
     }
