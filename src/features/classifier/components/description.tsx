@@ -32,6 +32,8 @@ const Result = ({ vegetable }: { vegetable: Vegetable | null }) => {
         const veggie = await getVeggie(vegetable.label.toLowerCase().trim());
         setVegetableDetails(veggie);
         setInfoLoading(false);
+      } else {
+        setInfoLoading(false);
       }
     };
 
@@ -39,6 +41,7 @@ const Result = ({ vegetable }: { vegetable: Vegetable | null }) => {
 
     return () => {
       setVegetableDetails(null);
+      setInfoLoading(false);
     };
   }, [vegetable]);
 
