@@ -20,7 +20,7 @@ import { Input } from "@/components/ui/input";
 // Vegetable Grid Item Component
 const VeggieItem = ({ vegetable }: { vegetable: Veggies }) => {
   return (
-    <Card className="p-4 border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 transition-all duration-200">
+    <Card className="p-4 border border-gray-200 rounded-lg shadow-md hover:bg-gray-100 transition-all duration-200 w-full md:w-[400px]">
       <CardHeader>
         <div className="relative w-full h-40 sm:h-48 lg:h-56 mb-2 rounded-md overflow-hidden z-0">
           <Image
@@ -112,7 +112,7 @@ export default function SearchVegetables() {
       )}
 
       {/* Vegetable Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="flex flex-wrap justify-center gap-6">
         {filteredVeggies.map((vegetable) => (
           <VeggieItem key={vegetable.id} vegetable={vegetable} />
         ))}
