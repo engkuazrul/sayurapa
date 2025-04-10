@@ -74,7 +74,7 @@ export default function ImageUpload({ onSubmitImage }: ImageUploadProps) {
           )}
 
           <div className="flex justify-center mt-4">
-            <Button type="submit">Analyze Image</Button>
+            <Button className="w-auto text-white bg-green-700 hover:bg-green-600 focus:ring-green-700" type="submit">Analyze Image</Button>
           </div>
         </form>
       </CardContent>
